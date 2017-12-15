@@ -2,12 +2,13 @@ package service;
 
 import java.io.IOException;
 
-import bo.WeatherBO;
+import businessObjects.WeatherBO;
 import dataAccess.WeatherDAO;
 
 public class WeatherService {
 	
 	public String saveWeather(WeatherBO weather) throws IOException {
+				
 		if(!isWeatherValid(weather)) {
 			return "You've entered incorrect weather data";
 		}
@@ -20,7 +21,7 @@ public class WeatherService {
 	}
 	
 	private boolean isWeatherValid(WeatherBO weather) {
-		if(weather.getHigh() > 180 || weather.getLow() < 100) {
+		if(weather.getHigh() > 180 || weather.getLow() < -100) {
 			return false;
 		}
 		else {

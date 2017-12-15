@@ -1,4 +1,4 @@
-package bo;
+package businessObjects;
 
 public class WeatherBO {
 	

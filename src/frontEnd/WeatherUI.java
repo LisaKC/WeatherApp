@@ -1,9 +1,12 @@
 package frontEnd;
-import java.util.Scanner;
 
-import bo.WeatherBO;
-public class weather {
-public static void main(String[] args) {
+import java.util.Scanner;
+import java.io.IOException;
+import businessObjects.WeatherBO;
+import service.WeatherService;
+
+public class WeatherUI {
+public static void main(String[] args) throws IOException{
 	
 	//Get the city info
 	System.out.println("Enter city");
@@ -26,5 +29,8 @@ public static void main(String[] args) {
 		weather.setState(state);
 		weather.setHigh(high);
 		weather.setLow(low);
+		
+		WeatherService weatherService = new WeatherService();
+		System.out.println(weatherService.saveWeather(weather));
 }
 }

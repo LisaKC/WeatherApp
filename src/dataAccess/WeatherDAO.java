@@ -4,9 +4,8 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
-import bo.WeatherBO;
+import businessObjects.WeatherBO;
 
 public class WeatherDAO {
 	
